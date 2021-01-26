@@ -51,7 +51,7 @@ public class Game {
     // Tackle damages
     // Leaf storm increase damage
     String[] leafType = {"Fight", "Grass"};
-    Pokemans makeLeafy = new Pokemans(1, 0, 100, 100, 20, 20, leafAttacks, leafType, "Aleafy");
+    Pokemans makeLeafy = new Pokemans(1, 0, 100, 20, 20, leafAttacks, leafType, "Aleafy");
     return makeLeafy;
   }
 
@@ -60,7 +60,7 @@ public class Game {
     // Speak damages
     // Ponder increase damage
     String[] runiType = {"Fight", "Grass"};
-    Pokemans makeRuni = new Pokemans(1, 0, 100, 100, 20, 20, runiAttacks, runiType, "Homeruni");
+    Pokemans makeRuni = new Pokemans(1, 0, 100, 20, 20, runiAttacks, runiType, "Homeruni");
     return makeRuni;
   }
 
@@ -69,7 +69,7 @@ public class Game {
     // Golden shower damages
     // Divine rays increase damage
     String[] taterType = {"Light", "Water"};
-    Pokemans makeTater = new Pokemans(1, 0, 100, 100, 20, 20, taterAttacks, taterType, "Sanitater");
+    Pokemans makeTater = new Pokemans(1, 0, 100, 20, 20, taterAttacks, taterType, "Sanitater");
     return makeTater;
   }
 
@@ -77,7 +77,7 @@ public class Game {
   public Pokemans getEnemy(){
     String[] enemyAttack = {"Bite", "Growl"};
     String[] enemyType = {"Dark", "Fight"};
-    Pokemans makeEnemy = new Pokemans(1, 0, 100, 100, 20, 20, enemyAttack, enemyType, "Feral Hound");
+    Pokemans makeEnemy = new Pokemans(1, 0, 100, 20, 20, enemyAttack, enemyType, "Feral Hound");
     return makeEnemy;
   }
 
