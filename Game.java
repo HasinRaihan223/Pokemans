@@ -17,10 +17,10 @@ public class Game {
     System.out.println("Please enter your name:");
 		playerName = myScanner.nextLine();
     System.out.println();
-    System.out.println("Welcome " + playerName.toLowerCase() + " to my pokemon game!");
+    System.out.println("Welcome " + playerName.toLowerCase() + " to my Pokemon game!");
   }
 
-  //Where you dab and get your starter pokemon
+  //Where you dab and get your starter Pokemon
   public void getStarterPokemon(){
     System.out.println("------------------------");
     System.out.println("Hey kid choose pokeman!");
@@ -32,52 +32,52 @@ public class Game {
 
     choice = myScanner.nextInt();
 
-    //These pokemon names are all jokes btw will change later
+    //These Pokemon names are all jokes btw will change later
 
 		if(choice==1){
-      //Get alif pokemon
+      //Get alif Pokemon
       getAleafy();
     }
     if(choice==2){
-      //Get Homeruni pokemon
+      //Get Homeruni Pokemon
     }
     if(choice==3){
       //Get sanitater
     }
   }
 
-  public Pokemans getAleafy(){
+  public Pokemon getAleafy(){
     String[] leafAttacks = {"Tackle", "Leaf Storm"};
     // Tackle damages
     // Leaf storm increase damage
     String[] leafType = {"Fight", "Grass"};
-    Pokemans makeLeafy = new Pokemans(1, 0, 100, 20, 20, leafAttacks, leafType, "Aleafy");
+    Pokemon makeLeafy = new Pokemon(1, 0, 100, 20, 20, leafAttacks, leafType, "Aleafy");
     return makeLeafy;
   }
 
-  public Pokemans getHomeruni(){
+  public Pokemon getHomeruni(){
     String[] runiAttacks = {"Speak", "Ponder"};
     // Speak damages
     // Ponder increase damage
     String[] runiType = {"Fight", "Grass"};
-    Pokemans makeRuni = new Pokemans(1, 0, 100, 20, 20, runiAttacks, runiType, "Homeruni");
+    Pokemon makeRuni = new Pokemon(1, 0, 100, 20, 20, runiAttacks, runiType, "Homeruni");
     return makeRuni;
   }
 
-  public Pokemans getSanitater(){
+  public Pokemon getSanitater(){
     String[] taterAttacks = {"Golden Shower", "Divine Rays"};
     // Golden shower damages
     // Divine rays increase damage
     String[] taterType = {"Light", "Water"};
-    Pokemans makeTater = new Pokemans(1, 0, 100, 20, 20, taterAttacks, taterType, "Sanitater");
+    Pokemon makeTater = new Pokemon(1, 0, 100, 20, 20, taterAttacks, taterType, "Sanitater");
     return makeTater;
   }
 
   //Idk what im doing with this
-  public Pokemans getEnemy(){
+  public Pokemon getEnemy(){
     String[] enemyAttack = {"Bite", "Growl"};
     String[] enemyType = {"Dark", "Fight"};
-    Pokemans makeEnemy = new Pokemans(1, 0, 100, 20, 20, enemyAttack, enemyType, "Feral Hound");
+    Pokemon makeEnemy = new Pokemon(1, 0, 100, 20, 20, enemyAttack, enemyType, "Feral Hound");
     return makeEnemy;
   }
 
