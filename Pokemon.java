@@ -1,3 +1,5 @@
+//to be used later
+
 public class Pokemon {
   private int level, exp, hp, baseDef, baseAttack, currentHp, currentBaseDef, currentBaseAttack, levelToEvolve;
   private String[] attacks, sprites, type, abilities;
