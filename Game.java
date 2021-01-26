@@ -40,9 +40,11 @@ public class Game {
     }
     if(choice==2){
       //Get Homeruni Pokemon
+      getHomeruni();
     }
     if(choice==3){
       //Get sanitater
+      getSanitater();
     }
   }
 
@@ -83,7 +85,7 @@ public class Game {
 
   public void fieldSetUp(){
     System.out.println("------------------------");
-    System.out.println("\n" + playerName + " you arrive at a grassy field rumored to contain strong, wild pokimaines.\nWhat do you do " + playerName.toLowerCase()+ "?");
+    System.out.println(playerName + " you arrive at a grassy field rumored to contain strong, wild pokimaines.\nWhat do you do " + playerName.toLowerCase()+ "?");
 		System.out.println("Input the number corresponding with the action.");
     System.out.println("");
 		System.out.println("1: Traverse the field");
@@ -104,8 +106,8 @@ public class Game {
 
   public void traverseField(){
     double rand = Math.random();
-		if (rand < 0.5) {
-      System.out.println("You find no pokimaines.");
+		if (rand < 0.6) {
+      System.out.println("\nYou find no pokimaines.");
       System.out.println("What do you do " + playerName.toLowerCase()+ "?\n");
 
       System.out.println("1: Keep traversing the field");
@@ -123,17 +125,16 @@ public class Game {
         System.out.println("You've started a new game!!!");
         setUpGame();
       }
-
     }
     else {
-      System.out.println("You encounter a Feral Hound!");
+      System.out.println("\nYou encounter a Feral Hound!");
     }
   }
 
   public static void setUpGame(){
     Game newGame = new Game();
     newGame.getName();
-    // newGame.getStaterPokemon();
+    newGame.getStarterPokemon();
     newGame.fieldSetUp();
   }
 
