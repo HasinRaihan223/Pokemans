@@ -51,7 +51,7 @@ public class Game {
     // Tackle damages
     // Leaf storm increase damage
     String[] leafType = {"Fight", "Grass"};
-    Pokemans makeLeafy = new Pokemon(1, 0, 100, 100, 20, 20, leafAttacks, leafType, "Aleafy");
+    Pokemans makeLeafy = new Pokemans(1, 0, 100, 100, 20, 20, leafAttacks, leafType, "Aleafy");
     return makeLeafy;
   }
 
@@ -60,7 +60,7 @@ public class Game {
     // Speak damages
     // Ponder increase damage
     String[] runiType = {"Fight", "Grass"};
-    Pokemans makeRuni = new Pokemon(1, 0, 100, 100, 20, 20, runiAttacks, runiType, "Homeruni");
+    Pokemans makeRuni = new Pokemans(1, 0, 100, 100, 20, 20, runiAttacks, runiType, "Homeruni");
     return makeRuni;
   }
 
@@ -69,7 +69,7 @@ public class Game {
     // Golden shower damages
     // Divine rays increase damage
     String[] taterType = {"Light", "Water"};
-    Pokemans makeTater = new Pokemon(1, 0, 100, 100, 20, 20, taterAttacks, taterType, "Sanitater");
+    Pokemans makeTater = new Pokemans(1, 0, 100, 100, 20, 20, taterAttacks, taterType, "Sanitater");
     return makeTater;
   }
 
@@ -77,7 +77,7 @@ public class Game {
   public Pokemans getEnemy(){
     String[] enemyAttack = {"Bite", "Growl"};
     String[] enemyType = {"Dark", "Fight"};
-    Pokemans makeEnemy = new Pokemon(1, 0, 100, 100, 20, 20, enemyAttack, enemyType, "Feral Hound");
+    Pokemans makeEnemy = new Pokemans(1, 0, 100, 100, 20, 20, enemyAttack, enemyType, "Feral Hound");
     return makeEnemy;
   }
 
@@ -87,12 +87,12 @@ public class Game {
 		System.out.println("Input the number corresponding with the action.");
     System.out.println("");
 		System.out.println("1: Traverse the field");
-		System.out.println("2: Exit game and restart");
+		System.out.println("2: Exit game (field) and restart");
 
     choice = myScanner.nextInt();
 
 		if(choice==1){
-      //Implement this...
+      traverseField();
     }
     if(choice==2){
       System.out.println("");
@@ -102,8 +102,32 @@ public class Game {
     }
   }
 
-  public void fieldRandomizer(){
+  public void traverseField(){
+    double rand = Math.random();
+		if (rand < 0.5) {
+      System.out.println("You find no pokimaines.");
+      System.out.println("What do you do " + playerName.toLowerCase()+ "?\n");
 
+      System.out.println("1: Keep traversing the field");
+  		System.out.println("2: Exit field (game) and restart");
+
+      choice = myScanner.nextInt();
+
+      //Choices
+      if(choice==1){
+        traverseField();
+      }
+      if(choice==2){
+        System.out.println("");
+        System.out.println("------------------------");
+        System.out.println("You've started a new game!!!");
+        setUpGame();
+      }
+
+    }
+    else {
+      System.out.println("You encounter a Feral Hound!");
+    }
   }
 
   public static void setUpGame(){

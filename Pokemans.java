@@ -1,4 +1,4 @@
-public class Pokemon {
+public class Pokemans {
   private int level, exp, hp, baseDef, baseAttack, currentHp, currentBaseDef, currentBaseAttack;
   private String[] attacks, type, abilities;
   private String name;
