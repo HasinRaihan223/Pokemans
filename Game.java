@@ -68,7 +68,7 @@ public class Game {
     pokemons.add(makeRuni);
   }
 
-  public Pokemon getSanitater(){
+  public void getSanitater(){
     String[] taterAttacks = {"Golden Shower", "Divine Rays"};
     // Golden shower damages
     // Divine rays increase damage
