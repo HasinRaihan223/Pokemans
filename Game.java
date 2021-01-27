@@ -1,10 +1,12 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Game {
 
   Scanner myScanner = new Scanner(System.in);
   String playerName;
   int choice;
+  ArrayList<Pokemon> pokemons = new ArrayList<Pokemon>();
 
   public static void main(String[]args){
     setUpGame();
@@ -48,22 +50,22 @@ public class Game {
     }
   }
 
-  public Pokemon getAleafy(){
+  public void getAleafy(){
     String[] leafAttacks = {"Tackle", "Leaf Storm"};
     // Tackle damages
     // Leaf storm increase damage
     String[] leafType = {"Fight", "Grass"};
     Pokemon makeLeafy = new Pokemon(1, 0, 100, 20, 20, leafAttacks, leafType, "Aleafy");
-    return makeLeafy;
+    pokemons.add(makeLeafy);
   }
 
-  public Pokemon getHomeruni(){
+  public void getHomeruni(){
     String[] runiAttacks = {"Speak", "Ponder"};
     // Speak damages
     // Ponder increase damage
     String[] runiType = {"Fight", "Grass"};
     Pokemon makeRuni = new Pokemon(1, 0, 100, 20, 20, runiAttacks, runiType, "Homeruni");
-    return makeRuni;
+    pokemons.add(makeRuni);
   }
 
   public Pokemon getSanitater(){
@@ -72,11 +74,11 @@ public class Game {
     // Divine rays increase damage
     String[] taterType = {"Light", "Water"};
     Pokemon makeTater = new Pokemon(1, 0, 100, 20, 20, taterAttacks, taterType, "Sanitater");
-    return makeTater;
+    pokemons.add(makeTater);
   }
 
   //Idk what im doing with this
-  public Pokemon getEnemy(){
+  public Pokemon makeEnemy(){
     String[] enemyAttack = {"Bite", "Growl"};
     String[] enemyType = {"Dark", "Fight"};
     Pokemon makeEnemy = new Pokemon(1, 0, 100, 20, 20, enemyAttack, enemyType, "Feral Hound");
@@ -128,6 +130,10 @@ public class Game {
     }
     else {
       System.out.println("\nYou encounter a Feral Hound!");
+
+      Pokemon enemy = makeEnemy();
+
+      //battle method
     }
   }
 
