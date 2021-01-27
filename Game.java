@@ -136,7 +136,7 @@ public class Game {
 
       //battle method
 
-      battleDecisions();
+      battleDecisions(mine, enemy);
     }
   }
 
@@ -147,8 +147,21 @@ public class Game {
     newGame.fieldSetUp();
   }
 
-  public void battleDecisions(){
+  public void battleDecisions(Pokemon mine, Pokemon enemy){
     System.out.println("\nWhat do you want to do? \n1: Attack \n2: Run");
-  }
 
-}
+    choice = myScanner.nextInt();
+
+    switch(choice){
+      case 1:
+        System.out.println("\nWhat attack do you want to do?");
+        String[] myAttacks = mine.getAttacks();
+        for (int i = 0; i<myAttacks.length; i++){
+          System.out.println((i+1) + ": " + myAttacks[i]);
+        }
+        break;
+      default:
+        break;
+      }
+    }
+  }
