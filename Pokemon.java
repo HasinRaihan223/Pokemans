@@ -66,4 +66,8 @@ public class Pokemon {
     this.currentHp += change;
     return this.currentHp;
   }
+
+  public String[] getAttacks(){
+    return this.attacks;
+  }
 }
