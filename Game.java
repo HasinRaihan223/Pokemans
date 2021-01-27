@@ -132,8 +132,11 @@ public class Game {
       System.out.println("\nYou encounter a Feral Hound!");
 
       Pokemon enemy = makeEnemy();
+      Pokemon mine = pokemons.get(0);
 
       //battle method
+
+      battleDecisions();
     }
   }
 
@@ -142,6 +145,10 @@ public class Game {
     newGame.getName();
     newGame.getStarterPokemon();
     newGame.fieldSetUp();
+  }
+
+  public void battleDecisions(){
+    System.out.println("\nWhat do you want to do? \n1: Attack \n2: Run");
   }
 
 }
